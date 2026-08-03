@@ -1,1 +1,2 @@
 # character-level-model-on-fpga-
+A character-level multilayer perceptron trained in PyTorch and deployed for real-time inference on a Nexys Artix-7 (xc7a100t) FPGA. The model is INT8-quantized and synthesized via Vitis HLS (using ap_fixed<16,4> fixed-point arithmetic and a polynomial tanh approximation), then integrated into a MicroBlaze-based system with UART for host communication. The design achieves 144.94 MHz Fmax at just 2% LUT utilization, with quantization error below 0.008 relative to the floating-point model.
